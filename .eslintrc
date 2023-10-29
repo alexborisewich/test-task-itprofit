@@ -20,11 +20,6 @@
     "sourceType": "module"
   },
   "plugins": ["prettier", "import", "@typescript-eslint"],
-  "settings": {
-    "import/resolver": {
-      "typescript": {}
-    }
-  },
   "ignorePatterns": ["dist", "node_modules", "coverage", "server"],
   "rules": {
     "import/order": [
