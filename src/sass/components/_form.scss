@@ -1,0 +1,132 @@
+.form {
+  width: 50%;
+  margin: 0 auto;
+  padding: 25px;
+
+  color: #4e51a8;
+
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 #917efb7a;
+
+  & > *:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  &__title {
+    text-align: center;
+  }
+
+  &__message {
+    height: 20px;
+    text-align: center;
+
+    &--success {
+      color: $success-color;
+    }
+
+    &--error {
+      color: $error-color;
+    }
+  }
+
+  &__input-list {
+    & > *:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+
+  &__input-message {
+    height: 20px;
+    margin-left: 10px;
+    color: $error-color;
+  }
+
+  &__input {
+    cursor: pointer;
+    resize: none;
+
+    display: block;
+
+    width: 100%;
+    padding: 0 15px;
+
+    font-size: 16px;
+    line-height: 40px;
+    color: rgb(7 8 59);
+
+    background: #f8f8ff;
+    border: 1px solid #928fcf;
+    border-radius: 20px;
+    outline: none;
+    box-shadow:
+      inset 0 0 5px #02000f3b,
+      inset 0 1px 2px #02011965;
+
+    transition: 0.3s ease-in-out;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    &::placeholder {
+      color: rgb(75 73 147);
+    }
+
+    &:focus {
+      color: rgb(6 2 49);
+      background: #e4e2ff;
+      border-color: #6861cc;
+      box-shadow:
+        inset 0 0 5px #00001233,
+        inset 0 1px 2px #01001266;
+    }
+
+    &--error {
+      color: rgb(180 22 22);
+      background: #efc3c3;
+      border-color: #e00101;
+      box-shadow:
+        inset 0 0 5px #77010133,
+        inset 0 1px 2px #77010166;
+    }
+  }
+
+  &__btn {
+    cursor: pointer;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto;
+    padding: 8px 20px;
+
+    font-size: 15px;
+    color: #fff;
+    text-shadow: 0 2px 2px #282828;
+
+    background: #5e58fd;
+    background-image: linear-gradient(to bottom, #585bff, #4139af);
+    border: none;
+    border-radius: 28px;
+    box-shadow: 0 2px 4px #282828;
+
+    transition: all 0.1s;
+
+    &:hover {
+      background: #3e34fd;
+      background-image: linear-gradient(to bottom, #3b34fd, #2823af);
+    }
+
+    &:active {
+      transform: translateY(1px);
+      box-shadow: 0 0 0 #282828;
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      background: #b7b5ff;
+      background-image: linear-gradient(to bottom, #9d9eff, #726db2);
+    }
+  }
+}
