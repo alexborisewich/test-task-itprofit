@@ -1,0 +1,5 @@
+{
+  "*.{js,ts,jsx,tsx}": ["npm run lint --max-warnings=0"],
+  "*.{css,scss}": ["npm run lintstyles --max-warnings=0"],
+  "*.{html,md,json}": ["prettier --write"]
+}
