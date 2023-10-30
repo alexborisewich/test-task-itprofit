@@ -1,4 +1,7 @@
 import IMask from 'imask';
+import { ApiResponse } from 'types';
+
+import { sendFormData } from './apiRequest';
 
 // Setup mask for phone input
 
@@ -79,7 +82,14 @@ export function validateForm() {
     });
 
     if (isValid()) {
-      // send request here
+      void sendFormData(form)
+        .then((response) => {
+          if (response.ok) {
+            form.reset();
+          }
+          void (response.json() as Promise<ApiResponse>).then((data) => setFormMessage(data.status, data.message));
+        })
+        .catch((error) => console.warn(error));
     } else {
       submitBtn.disabled = true;
       setFormMessage('error', 'Fields are empty or contain incorrect data');
