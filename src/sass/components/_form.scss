@@ -90,43 +90,4 @@
         inset 0 1px 2px #77010166;
     }
   }
-
-  &__btn {
-    cursor: pointer;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    margin: 0 auto;
-    padding: 8px 20px;
-
-    font-size: 15px;
-    color: #fff;
-    text-shadow: 0 2px 2px #282828;
-
-    background: #5e58fd;
-    background-image: linear-gradient(to bottom, #585bff, #4139af);
-    border: none;
-    border-radius: 28px;
-    box-shadow: 0 2px 4px #282828;
-
-    transition: all 0.1s;
-
-    &:hover {
-      background: #3e34fd;
-      background-image: linear-gradient(to bottom, #3b34fd, #2823af);
-    }
-
-    &:active {
-      transform: translateY(1px);
-      box-shadow: 0 0 0 #282828;
-    }
-
-    &:disabled {
-      cursor: not-allowed;
-      background: #b7b5ff;
-      background-image: linear-gradient(to bottom, #9d9eff, #726db2);
-    }
-  }
 }
